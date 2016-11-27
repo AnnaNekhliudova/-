@@ -43,7 +43,7 @@ type
 var
   Form1: TForm1;
   x1, x2, x3, x4, x5, x6, y1, y2, y3, y4, StepXTank,
-  x1gun, x2gun, y1gun, y2gun, y1gunInit, y2gunInit, StepYgun: Integr;
+  x1gun, x2gun, y1gun, y2gun, y1gunInit, y2gunInit, StepYgun: Integer;
 Const
   x1init = 0;
   x2init = 50;
@@ -60,10 +60,10 @@ implementation
 
 procedure TForm1.Button1Click(Sender: TObject);
 begin
-  Image3.Visible := Fals;
+  Image3.Visible := False;
   Label3.Visible := False;
-  y1gunInit := Form1.Image1.Hight-7;
-  y2gunInit := Form1.Image1.Hight;
+  y1gunInit := Form1.Image1.Height-7;
+  y2gunInit := Form1.Image1.Height;
   Timer1.Interval := StrToInt(Edit1.Text);
   StepXtank := StrToInt(Edit2.Text);
   StepYgun := 0;
@@ -128,7 +128,7 @@ begin
   With Image2.Canvas do
   begin
     Pen.Width:=2;
-    Brush.Color := clOliv;
+    Brush.Color := clOlive;
     Rectangle(0, 0, Image2.Width, Image2.Height);
     Brush.Color := clGray;
     Rectangle(700, 10, 730, 65);
